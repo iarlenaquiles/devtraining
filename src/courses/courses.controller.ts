@@ -25,16 +25,7 @@ export class CoursesController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    const course = this.courserServices.findOne(id);
-
-    if (!course) {
-      throw new HttpException(
-        `Course id ${id} not found`,
-        HttpStatus.NOT_FOUND,
-      );
-    }
-
-    return course;
+    return this.courserServices.findOne(id);
   }
 
   @Post()
