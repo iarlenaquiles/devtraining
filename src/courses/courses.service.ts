@@ -44,7 +44,6 @@ export class CoursesService {
       tags,
     });
 
-    console.log(create)
     return this.courseRepository.save(create);
   }
 

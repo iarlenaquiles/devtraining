@@ -30,7 +30,8 @@ export class CoursesController {
   @Post()
   @HttpCode(HttpStatus.NO_CONTENT)
   create(@Body() createCourseDto: CreateCourseDto) {
-    this.courserServices.create(createCourseDto);
+    const create = this.courserServices.create(createCourseDto);
+    return create;
   }
 
   @Put(':id')
