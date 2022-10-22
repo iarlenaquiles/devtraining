@@ -43,6 +43,8 @@ export class CoursesService {
       ...createCourseDto,
       tags,
     });
+
+    console.log(create)
     return this.courseRepository.save(create);
   }
 
@@ -54,7 +56,7 @@ export class CoursesService {
       ));
 
     const course = await this.courseRepository.preload({
-      id: +id,
+      id,
       ...updateCourseDto,
       tags,
     });
