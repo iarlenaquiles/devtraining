@@ -5,21 +5,7 @@ import { CoursesModule } from './courses/courses.module';
 import { DatabaseModule } from './database/database.module';
 
 @Module({
-  imports: [
-    CoursesModule,
-    // TypeOrmModule.forRoot({
-    //   type: 'postgres',
-    //   host: 'db',
-    //   port: 5432,
-    //   username: 'postgres',
-    //   password: 'docker',
-    //   database: 'devtraining',
-    //   entities: [__dirname + '/**/*.entity.js'],
-    //   autoLoadEntities: false,
-    //   synchronize: false,
-    // }),
-    DatabaseModule,
-  ],
+  imports: [CoursesModule, DatabaseModule],
   controllers: [AppController],
   providers: [AppService],
 })
