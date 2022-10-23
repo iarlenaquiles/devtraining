@@ -28,7 +28,7 @@ export class CoursesController {
   }
 
   @Post()
-  @HttpCode(HttpStatus.NO_CONTENT)
+  @HttpCode(HttpStatus.CREATED)
   create(@Body() createCourseDto: CreateCourseDto) {
     const create = this.courserServices.create(createCourseDto);
     return create;
